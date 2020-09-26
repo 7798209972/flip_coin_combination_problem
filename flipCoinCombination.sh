@@ -172,3 +172,12 @@ echo "Triplet Percentage : $triplet_percentage %";
 echo "=============================================";
 printf "\n";
 
+if [ $singlet_percentage -gt $doublet_percentage ] && [ $singlet_percentage -gt $triplet_percentage ]
+then
+        echo "Singlet is a Winner Combination";
+elif [ $doublet_percentage -gt $singlet_percentage ] && [ $doublet_percentage -gt $triplet_percentage ]
+then
+        echo "Doublet is a Winner Combination";
+else
+        echo "Triplet is a Winner Combination";
+fi
